@@ -36,6 +36,19 @@ footer-links:
 # You can find your shortname on the Settings page of your Disqus account
 disqus:
 
+#Defining Categories
+collections:
+  category:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
+
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 

@@ -4,13 +4,15 @@ layout: default
 
 <article class="post">
   <h1>{{ page.title }}</h1>
+  <p><span class="postStandFirst">{{ page.sub }}</span></p>
+
+  <hr>
+  <p style="font-size: 14px; color: #767676;">By {{ page.author.display_name }}, {{ page.author.role }}<br>
+  {{ page.date | date: "%B %e, %Y" }} &#8226; {{ page.time }}</p>
+  <hr>
 
   <div class="entry">
     {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
   {% include disqus.html %}

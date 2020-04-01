@@ -26,7 +26,9 @@ tags:
 <p><span class="postStandFirst" style="color: #0896d5; line-height: 26px; font-size: 18px;">A next-level smartphone.</span></p>
 <p><!-- /wp:paragraph --></p>
 <p>Fancy a brand new Note series phone? This week, the good people over at Samsung announced not one but two new devices. The Samsung Galaxy Note 10 and the Note 10 Plus could be serious game-changers. So, which should you choose?</p>
-<p><iframe src="https://www.youtube.com/embed/CYA_XAMfRfo" width="600" height="338" frameborder="0" allowfullscreen="allowfullscreen"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span></iframe></p>
+<div class="embed-responsive embed-responsive-16by9">
+	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CYA_XAMfRfo" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</div>
 <h2>Flawless Design</h2>
 <p>You might feel like you&rsquo;re seeing double when you look at the <a href="https://www.buymobiles.net/samsung/galaxy-note-10-aura-black" target="_blank" rel="noopener noreferrer">Samsung Galaxy Note 10</a> and the <a href="https://www.buymobiles.net/samsung/galaxy-note-10-plus-aura-black" target="_blank" rel="noopener noreferrer">Note 10 Plus</a>. These two phones are nearly identical &ndash;&nbsp;both with a flawless and almost bezeless design. Each comes with a Gorilla Glass 6 casing and metal frames.</p>
 <p>Flip the devices over to the front and you will see the camera that all the hype was about. Yes, the selfie cam sits neatly at the top of each screen, with a hole-punch style look.</p>

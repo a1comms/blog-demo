@@ -4,7 +4,7 @@
 //
 // IMPORTS
 //
-
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,500,500i,600&display=swap');
 @import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
@@ -19,35 +19,36 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
+  font-size: 1.2;
+  color: #000000;
+  font-family: 'Lora', serif;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: 'Lora', serif;
   color: $darkerGray;
-  font-weight: bold;
+  font-weight: 500;
 
-  line-height: 1.7;
-  margin: 1em 0 15px;
+  line-height: 1.2;
+  margin: .5em 0 15px;
   padding: 0;
 
   @include mobile {
-    line-height: 1.4;
+    line-height: 1.1;
   }
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 50px;
+
   a {
     color: inherit;
+  }
+
+  @include mobile {
+    font-size: 36px;
+    line-height: 1.1;
   }
 }
 
@@ -73,7 +74,7 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $black;
   }
 }
 
@@ -103,11 +104,17 @@ em, i {
 }
 
 strong, b {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 img {
   max-width: 100%;
+}
+
+.postStandFirst {
+  color: #0896d5;
+  line-height: 26px;
+  font-size: 18px;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -118,6 +125,13 @@ img {
 .date {
   font-style: italic;
   color: $gray;
+}
+
+span.category {
+  background-color: #007bff;
+  padding: 7px 20px 8px 20px;
+  border-radius: 35px;
+  color: #ffffff;
 }
 
 // Specify the color of the selection
@@ -192,10 +206,10 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: #000000;
   cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
+  font-family: 'Lora', serif;
+  font-weight: 400;
   font-size: 28px;
   letter-spacing: 1px;
 }
@@ -213,7 +227,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: 'Lora', serif;
   font-size: 18px;
 
   @include mobile {
@@ -225,9 +239,9 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: #000000;
     text-align: right;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
 
     @include mobile {
@@ -242,8 +256,8 @@ nav {
 //
 
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  padding: 2em 0 2em 0;
+  border-top: 1px solid $lightGray;
 }
 
 .posts > .post:last-child {

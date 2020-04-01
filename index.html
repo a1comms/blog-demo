@@ -2,32 +2,75 @@
 layout: default
 ---
 
-<div class="posts">
-   {% for post in paginator.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-
-  <!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous">
-      Previous
-    </a>
-  {% else %}
-    <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-  <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
+<div class="row">
+  <div class="col">
+    <div class="jumbotron p-3 p-md-5 text-white bg-dark">
+      <div class="row">
+      <div class="col-md-6">
+        <h1 style="color: #ffffff; margin-top: 0;">When is the best time to buy a new mobile phone?</h1>
+        <p class="lead my-3">So, when is the best time to buy a new phone? We all wonder don’t we, should I upgrade to the latest handset right now or wait a little bit?</p>
+        <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+      </div>
+      <div class="col-md-5 offset-md-1">
+        <img src="images/blog-homepage-featured.png" class="img-fluid">
+      </div>
+    </div>
+    </div>
+  </div>
 </div>
+
+<div class="row">
+  <div class="col-12 col-md-8">
+    <div class="posts">
+      {% for post in paginator.posts %}
+        <article class="post">
+
+          <a href="{{ site.baseurl }}/category/{{ post.categories }}">
+            <span class="category">{{ post.categories }}</span>
+          </a>
+
+          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+          By {{ post.author.display_name }} | {{ post.date | date: "%d %b, %Y" }}
+          <p>{{ post.content | truncatewords: 50 }}</p>
+          <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
+
+        </article>
+      {% endfor %}
+
+      <!-- Pagination links -->
+      <div class="pagination">
+        <nav aria-label="Page navigation">
+          <ul class="pagination pagination-md">
+          {% if paginator.previous_page %}
+            <li class="page-item">
+              <a class="page-link" href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous">
+                Previous
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous">{{ paginator.previous_page }}</a>
+            </li>
+          {% endif %}
+            <li class="page-item active" aria-current="page">
+              <span class="page-link" class="page_number ">
+                {{ paginator.page }}
+              </span>
+            </li>
+          {% if paginator.next_page %}
+            <li class="page-item">
+              <a class="page-link" href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next">{{ paginator.next_page }}</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="next">Next</a>
+            </li>
+          {% endif %}
+            </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4">
+    {% include sidebar.html %}
+  </div>
 </div>
